@@ -4,7 +4,7 @@ import Logo from '../../Logo/Logo';
 import Items from '../Items/Items';
 import DrawerToggle from '../SideDrawer/DrawerToggle/DrawerToggle'
 
-const Toolbar = ({ open, toggled }) => {
+const Toolbar = ({ toggled }) => {
   return (
     <header className="toolbar">
       <div className="toolbarLogo">

@@ -27,8 +27,8 @@ const withErrorHandler = (WrappedComponent, axios) => {
         modalClosed={() => setError(null)}>
         {error !== null ? error.message : null}
       </Modal>
-      <WrappedComponent {...props} />;
-    </>
+      <WrappedComponent {...props} />
+    </>;
   };
   return WithErrorHandler;
 };
