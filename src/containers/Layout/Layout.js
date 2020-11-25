@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Aux from '../../hoc/Auxi';
 import './Layout.css'
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar'
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer'
@@ -19,16 +18,13 @@ class Layout extends Component {
   }
 
   render() {
-    return (
-      <Aux>
-        <Toolbar toggled={this.sideDrawerToggleHandler} />
-        <SideDrawer
-          open={this.state.showSideDrawer}
-          closed={this.sideDrawerClosedHandler} />
-        <main className='content'>{this.props.children}</main>
-      </Aux >
-    );
-
+    return <>
+      <Toolbar toggled={this.sideDrawerToggleHandler} />
+      <SideDrawer
+        open={this.state.showSideDrawer}
+        closed={this.sideDrawerClosedHandler} />
+      <main className='content'>{this.props.children}</main>
+    </>;
   };
 };
 

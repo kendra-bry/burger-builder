@@ -2,7 +2,6 @@ import React from 'react';
 import Logo from '../../Logo/Logo';
 import Items from '../Items/Items';
 import Backdrop from '../../UI/Backdrop/Backdrop';
-import Aux from '../../../hoc/Auxi'
 import './SideDrawer.css';
 
 const SideDrawer = ({ closed, open }) => {
@@ -10,19 +9,17 @@ const SideDrawer = ({ closed, open }) => {
   if (open) {
     attachedClasses = ['drawer', 'open'];
   }
-  return (
-    <Aux>
-      <Backdrop show={open} clicked={closed} />
-      <div className={attachedClasses.join(' ')}>
-        <div className="drawerLogo">
-          <Logo />
-        </div>
-        <nav>
-          <Items />
-        </nav>
+  return <>
+    <Backdrop show={open} clicked={closed} />
+    <div className={attachedClasses.join(' ')}>
+      <div className="drawerLogo">
+        <Logo />
       </div>
-    </Aux>
-  );
+      <nav>
+        <Items />
+      </nav>
+    </div>
+  </>;
 }
 
 export default SideDrawer;

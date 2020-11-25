@@ -1,5 +1,4 @@
 import React from "react";
-import Aux from "../../../hoc/Auxi";
 import Button from "../../UI/Button/Button"
 
 const OrderSummary = (props) => {
@@ -9,19 +8,17 @@ const OrderSummary = (props) => {
       {igKey}: {ingredients[igKey]}
     </li>
   ));
-  return (
-    <Aux>
-      <h3 className="tc">Your Order</h3>
-      <p>A delicious burger with the following ingredients:</p>
-      <ul>{summary}</ul>
-      <p><strong>Total Price: ${price.toFixed(2)} </strong></p>
-      <p>Continue to checkout?</p>
-      <div className="tc">
-        <Button btnType="danger" clicked={purchaseCancel}>CANCEL</Button>
-        <Button btnType="success" clicked={purchaseContinue}>CONTINUE</Button>
-      </div>
-    </Aux>
-  );
+  return <>
+    <h3 className="tc">Your Order</h3>
+    <p>A delicious burger with the following ingredients:</p>
+    <ul>{summary}</ul>
+    <p><strong>Total Price: ${price.toFixed(2)} </strong></p>
+    <p>Continue to checkout?</p>
+    <div className="tc">
+      <Button btnType="danger" clicked={purchaseCancel}>CANCEL</Button>
+      <Button btnType="success" clicked={purchaseContinue}>CONTINUE</Button>
+    </div>
+  </>;
 };
 
 export default OrderSummary;
