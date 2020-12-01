@@ -1,14 +1,15 @@
 import React from 'react';
 import './Item.css';
+import { NavLink } from 'react-router-dom';
 
-const Item = ({children, link, active}) => {
+const Item = ({ children, link, exact }) => {
   return (
     <li className="item">
-      <a 
-        href={link}
-        className={active ? 'active' : null}
-        >{children}</a>
-      </li>
+      <NavLink
+        exact={exact}
+        to={link}
+      >{children}</NavLink>
+    </li>
   );
 }
 
