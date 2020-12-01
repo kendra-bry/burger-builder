@@ -87,7 +87,7 @@ class BurgerBuilder extends Component {
     const ingredients = encodeURIComponent(JSON.stringify(this.state.ingredients));
     const price = encodeURIComponent(this.state.totalPrice);
     this.props.history.push({
-      pathname: '/checkout',
+      pathname: '/burger-builder/checkout',
       search: `?ingredients=${ingredients}&price=${price}`
     })
   }

@@ -5,8 +5,8 @@ import Item from './Item/Item';
 const Items = () => {
   return (
     <ul className="items">
-      <Item link="/burger-builder">Burger Builder</Item>
-      <Item link="/orders" >Orders</Item>
+      <Item link="/burger-builder" exact>Burger Builder</Item>
+      <Item link="/burger-builder/orders" >Orders</Item>
     </ul>
   );
 }
