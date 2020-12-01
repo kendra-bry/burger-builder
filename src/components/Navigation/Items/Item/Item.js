@@ -6,7 +6,6 @@ const Item = ({ children, link, exact }) => {
   return (
     <li className="item">
       <NavLink
-        exact={exact}
         to={link}
       >{children}</NavLink>
     </li>
